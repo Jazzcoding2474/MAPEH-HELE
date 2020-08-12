@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>My MAPEH/HELE</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style> body {
                background-color:rgb(215, 250, 220);
 
@@ -19,6 +21,45 @@
             p{
     font-size:17px;}
 
+
+	.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: #0b7dda;
+}
 .btn:hover, .dropdown:hover .btn {
   background-color: #0b7dda;
 }
@@ -75,6 +116,16 @@ a {
 <p>The game down below is the first 2 levels of mario click on it and use the arrow keys to move.</p>
 <p>The reason it's not at a full 30 fps is cause the coding language i used is called Processing JS which is out dated.</p>
 <p>If you want to learn more about this coding language go to Khan academy :)</p>
+<button class="btn">All the other projects -></button>
+<div class="dropdown">
+  <button class="btn" style="border-left:1px solid #0d8bf2">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="https://jazzcoding2474.github.io/MAPEH-HELE3/">Gelatin</a>
+
+  </div>
+</div>
 <p align="center">
 	      <canvas id="drawingm"></canvas>
     </p>
@@ -2366,7 +2417,6 @@ keyReleased = function() {
 
 //IMPLEMENT PIPES LAST, THEY MESS UP ALIGNMENT
 /**
-
 0       empty
 1       ground block
 2       stone block
@@ -2382,7 +2432,6 @@ keyReleased = function() {
 12      pipe holding enemy
 13      coin
 14      flag
-
 */
 
 //an array of the different blocks in a level / part of lvl
@@ -4131,12 +4180,9 @@ draw = function() {
     //useful for placing enemies!
     /*
     if (mouseIsPressed) {
-
         fill(0, 0, 0);
         text("x: " + floor((mouseX - translatePos)/25)*25 + ", y: " + floor(mouseY/25)*25, 200, 200);
-
     }
-
     */
 
 };
@@ -4148,7 +4194,9 @@ draw = function() {
 
     var processingInstance = new Processing(canvas, nig);
 </script>
-	<p>If you hover you mouse over the button an animation will play :D.</p>
+
+	<p style = "text-align:center">If you hover you mouse over the button an animation will play :D.</p>
+
 <div class="container">
       <a href="https://jazzcoding2474.github.io/MAPEH-HELE2/" class="btn">The making of it</a>
   </div>
